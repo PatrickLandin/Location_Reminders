@@ -16,6 +16,8 @@
 		EC4639C41A801D3800A5DAE0 /* Location_RemindersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639C31A801D3800A5DAE0 /* Location_RemindersTests.m */; };
 		EC4639CF1A801F4300A5DAE0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639CE1A801F4300A5DAE0 /* MapViewController.m */; };
 		EC4639D11A80211E00A5DAE0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4639D01A80211E00A5DAE0 /* MapKit.framework */; };
+		EC4639D41A8037A900A5DAE0 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639D31A8037A900A5DAE0 /* Queue.m */; };
+		EC4639D71A8038D700A5DAE0 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639D61A8038D700A5DAE0 /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		EC4639CD1A801F4300A5DAE0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		EC4639CE1A801F4300A5DAE0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		EC4639D01A80211E00A5DAE0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EC4639D21A8037A900A5DAE0 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		EC4639D31A8037A900A5DAE0 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		EC4639D51A8038D700A5DAE0 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		EC4639D61A8038D700A5DAE0 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 				EC4639AF1A801D3800A5DAE0 /* ViewController.m */,
 				EC4639CD1A801F4300A5DAE0 /* MapViewController.h */,
 				EC4639CE1A801F4300A5DAE0 /* MapViewController.m */,
+				EC4639D51A8038D700A5DAE0 /* Stack.h */,
+				EC4639D61A8038D700A5DAE0 /* Stack.m */,
+				EC4639D21A8037A900A5DAE0 /* Queue.h */,
+				EC4639D31A8037A900A5DAE0 /* Queue.m */,
 				EC4639B11A801D3800A5DAE0 /* Main.storyboard */,
 				EC4639B41A801D3800A5DAE0 /* Images.xcassets */,
 				EC4639B61A801D3800A5DAE0 /* LaunchScreen.xib */,
@@ -233,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4639D71A8038D700A5DAE0 /* Stack.m in Sources */,
+				EC4639D41A8037A900A5DAE0 /* Queue.m in Sources */,
 				EC4639B01A801D3800A5DAE0 /* ViewController.m in Sources */,
 				EC4639AD1A801D3800A5DAE0 /* AppDelegate.m in Sources */,
 				EC4639AA1A801D3800A5DAE0 /* main.m in Sources */,

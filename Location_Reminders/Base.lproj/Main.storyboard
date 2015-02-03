@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pI6-t1-RbY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,8 +21,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmm-pa-qXB">
-                                <rect key="frame" x="260" y="550" width="81" height="30"/>
-                                <state key="normal" title="Poquerolles">
+                                <rect key="frame" x="266" y="550" width="69" height="30"/>
+                                <state key="normal" title="Mill Creek">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC0-nM-V0T">
-                                <rect key="frame" x="391" y="550" width="59" height="30"/>
+                                <rect key="frame" x="375" y="550" width="59" height="30"/>
                                 <state key="normal" title="Gambon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,8 +39,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcA-Ej-f90">
-                                <rect key="frame" x="141" y="550" width="69" height="30"/>
-                                <state key="normal" title="Mill Creek">
+                                <rect key="frame" x="145" y="550" width="81" height="30"/>
+                                <state key="normal" title="Poquerolles">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -52,8 +52,8 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bmm-pa-qXB" secondAttribute="bottom" constant="20" id="4Dy-6M-SkL"/>
                             <constraint firstItem="dC0-nM-V0T" firstAttribute="bottom" secondItem="BcA-Ej-f90" secondAttribute="bottom" id="5jK-Nu-MYQ"/>
-                            <constraint firstItem="Bmm-pa-qXB" firstAttribute="leading" secondItem="BcA-Ej-f90" secondAttribute="trailing" constant="50" id="7Dn-BI-scI"/>
-                            <constraint firstItem="dC0-nM-V0T" firstAttribute="leading" secondItem="Bmm-pa-qXB" secondAttribute="trailing" constant="50" id="EDY-fj-EZC"/>
+                            <constraint firstItem="Bmm-pa-qXB" firstAttribute="leading" secondItem="BcA-Ej-f90" secondAttribute="trailing" constant="40" id="7Dn-BI-scI"/>
+                            <constraint firstItem="dC0-nM-V0T" firstAttribute="leading" secondItem="Bmm-pa-qXB" secondAttribute="trailing" constant="40" id="EDY-fj-EZC"/>
                             <constraint firstAttribute="centerX" secondItem="Bmm-pa-qXB" secondAttribute="centerX" id="Eva-M1-fd4"/>
                             <constraint firstItem="qkC-uO-P94" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Jgy-gT-eo9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qkC-uO-P94" secondAttribute="bottom" id="X2j-ek-s3Z"/>
@@ -63,12 +63,51 @@
                             <constraint firstAttribute="trailingMargin" secondItem="qkC-uO-P94" secondAttribute="trailing" constant="-16" id="ukP-FR-hNX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AB6-5Z-2aC"/>
                     <connections>
                         <outlet property="mapView" destination="qkC-uO-P94" id="Phu-uV-baq"/>
+                        <segue destination="Ufz-c9-ERc" kind="show" identifier="SHOW_DETAIL" id="OLQ-w2-Nc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1058" y="1033"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D0q-nt-bqJ">
+            <objects>
+                <viewController id="Ufz-c9-ERc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CV2-go-jub"/>
+                        <viewControllerLayoutGuide type="bottom" id="JyJ-1D-oqZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6t-rM-aOT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UtY-YW-jWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="1033"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JTU-6w-2oQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pI6-t1-RbY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WcE-49-Vnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Gq-gd-aZs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikU-wM-1o9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="1033"/>
         </scene>
     </scenes>
 </document>
