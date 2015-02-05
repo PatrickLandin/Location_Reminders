@@ -9,9 +9,13 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AddReminderViewController.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) MKPointAnnotation *selectedAnnotation;
 
 @end
 
@@ -19,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reminderAdded:) name:@"ReminderAdded" object:nil];
+  
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.mapView.delegate = self;
@@ -51,13 +58,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) reminderAdded:(NSNotification *)notification {
+  NSLog(@"reminder notification");
+  NSDictionary *userInfo = notification.userInfo;
+  CLCircularRegion *region = userInfo[@"reminder"];
+//  NSString *notificationName = notification.name;
+  
+  MKCircle *circleOverlay = [MKCircle circleWithCenterCoordinate:region.center radius:region.radius];
+  
+  [self.mapView addOverlay:circleOverlay];
+}
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
+  MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithOverlay:overlay];
+  circleRenderer.fillColor = [UIColor blueColor];
+  circleRenderer.strokeColor = [UIColor redColor];
+  circleRenderer.alpha = 0.12;
+  return circleRenderer;
+}
+
 -(void)mapLongPressed:(id)sender {
   
   UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
   NSLog(@"long press fired");
   if (longPress.state == 3) {
     CGPoint location = [longPress locationInView:self.mapView];
+    NSLog(@"location y: %f location x: %f",location.y, location.x);
     CLLocationCoordinate2D coordinates = [self.mapView convertPoint:location toCoordinateFromView:self.mapView];
+    NSLog(@"coordinate long: %f coordinate lat x: %f",coordinates.longitude, coordinates.latitude);
     
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     annotation.coordinate = coordinates;
@@ -76,7 +104,7 @@
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-  MKPinAnnotationView *annotationView =  [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annotationView"];
+  MKPinAnnotationView *annotationView =  [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"AnnotationView"];
   annotationView.animatesDrop = TRUE;
   annotationView.pinColor = MKPinAnnotationColorPurple;
   annotationView.canShowCallout = TRUE;
@@ -86,9 +114,25 @@
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-//  MKPointAnnotation *annotation = view.annotation;
-  
+  self.selectedAnnotation = view.annotation;
   [self performSegueWithIdentifier:@"SHOW_DETAIL" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"SHOW_DETAIL"]) {
+    AddReminderViewController *addReminderVC = (AddReminderViewController *)segue.destinationViewController;
+    addReminderVC.annotation = self.selectedAnnotation;
+    addReminderVC.locationManager = self.locationManager;
+  }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+  NSLog(@"Region entered");
+  UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+  localNotification.alertBody = @"You've entered a region of importance!";
+  localNotification.alertAction = @"Region Action";
+  
+  [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
 - (IBAction)middleButtonPressed:(UIButton *)sender {
@@ -100,7 +144,7 @@
 
 - (IBAction)leftButtonPressed:(UIButton *)sender {
   CLLocationCoordinate2D coordinates = {.latitude =  42.999546, .longitude =  6.171138};
-  MKCoordinateSpan span = {.latitudeDelta =  0.06, .longitudeDelta =  0.06};
+  MKCoordinateSpan span = {.latitudeDelta =  0.2, .longitudeDelta =  0.06};
   MKCoordinateRegion region = {coordinates, span};
   [self.mapView setRegion:region animated: TRUE];
 }
@@ -110,6 +154,10 @@
   MKCoordinateSpan span = {.latitudeDelta =  0.04, .longitudeDelta =  0.04};
   MKCoordinateRegion region = {coordinates, span};
   [self.mapView setRegion:region animated: TRUE];
+}
+
+-(void) dealloc {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

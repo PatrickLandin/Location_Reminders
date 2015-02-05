@@ -22,8 +22,9 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmm-pa-qXB">
                                 <rect key="frame" x="266" y="550" width="69" height="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Mill Creek">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="middleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Meb-e2-6bg"/>
@@ -31,8 +32,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC0-nM-V0T">
                                 <rect key="frame" x="375" y="550" width="59" height="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Gambon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="rightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6x-aV-xxC"/>
@@ -40,8 +42,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcA-Ej-f90">
                                 <rect key="frame" x="145" y="550" width="81" height="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Poquerolles">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="leftButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZc-9x-UhU"/>
@@ -65,18 +68,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="AB6-5Z-2aC"/>
                     <connections>
-                        <outlet property="mapView" destination="qkC-uO-P94" id="Phu-uV-baq"/>
+                        <outlet property="mapView" destination="qkC-uO-P94" id="DQo-0f-810"/>
                         <segue destination="Ufz-c9-ERc" kind="show" identifier="SHOW_DETAIL" id="OLQ-w2-Nc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="1033"/>
+            <point key="canvasLocation" x="1070" y="1033"/>
         </scene>
-        <!--View Controller-->
+        <!--AddReminderViewController-->
         <scene sceneID="D0q-nt-bqJ">
             <objects>
-                <viewController id="Ufz-c9-ERc" sceneMemberID="viewController">
+                <viewController title="AddReminderViewController" id="Ufz-c9-ERc" customClass="AddReminderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CV2-go-jub"/>
                         <viewControllerLayoutGuide type="bottom" id="JyJ-1D-oqZ"/>
@@ -84,7 +87,22 @@
                     <view key="view" contentMode="scaleToFill" id="e6t-rM-aOT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZr-Gt-WlB">
+                                <rect key="frame" x="249" y="285" width="103" height="30"/>
+                                <state key="normal" title="Add Reminder!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addReminderPressed:" destination="Ufz-c9-ERc" eventType="touchUpInside" id="fCA-WX-5hu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83493523849999995" green="0.88671875" blue="0.98591694080000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="yZr-Gt-WlB" secondAttribute="centerY" id="eEh-YK-QGl"/>
+                            <constraint firstAttribute="centerX" secondItem="yZr-Gt-WlB" secondAttribute="centerX" id="ePi-IS-tLQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtY-YW-jWw" userLabel="First Responder" sceneMemberID="firstResponder"/>

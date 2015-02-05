@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EC4639AA1A801D3800A5DAE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639A91A801D3800A5DAE0 /* main.m */; };
 		EC4639AD1A801D3800A5DAE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639AC1A801D3800A5DAE0 /* AppDelegate.m */; };
-		EC4639B01A801D3800A5DAE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639AF1A801D3800A5DAE0 /* ViewController.m */; };
 		EC4639B31A801D3800A5DAE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4639B11A801D3800A5DAE0 /* Main.storyboard */; };
 		EC4639B51A801D3800A5DAE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4639B41A801D3800A5DAE0 /* Images.xcassets */; };
 		EC4639B81A801D3800A5DAE0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4639B61A801D3800A5DAE0 /* LaunchScreen.xib */; };
@@ -18,6 +17,8 @@
 		EC4639D11A80211E00A5DAE0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4639D01A80211E00A5DAE0 /* MapKit.framework */; };
 		EC4639D41A8037A900A5DAE0 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639D31A8037A900A5DAE0 /* Queue.m */; };
 		EC4639D71A8038D700A5DAE0 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639D61A8038D700A5DAE0 /* Stack.m */; };
+		EC4639D91A817DAC00A5DAE0 /* AustinJackson.png in Resources */ = {isa = PBXBuildFile; fileRef = EC4639D81A817DAC00A5DAE0 /* AustinJackson.png */; };
+		EC4639DC1A82B6A700A5DAE0 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639DB1A82B6A700A5DAE0 /* AddReminderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,6 @@
 		EC4639A91A801D3800A5DAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC4639AB1A801D3800A5DAE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC4639AC1A801D3800A5DAE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EC4639AE1A801D3800A5DAE0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC4639AF1A801D3800A5DAE0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC4639B21A801D3800A5DAE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC4639B41A801D3800A5DAE0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC4639B71A801D3800A5DAE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -51,6 +50,9 @@
 		EC4639D31A8037A900A5DAE0 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		EC4639D51A8038D700A5DAE0 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		EC4639D61A8038D700A5DAE0 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		EC4639D81A817DAC00A5DAE0 /* AustinJackson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AustinJackson.png; sourceTree = "<group>"; };
+		EC4639DA1A82B6A700A5DAE0 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddReminderViewController.h; path = ../AddReminderViewController.h; sourceTree = "<group>"; };
+		EC4639DB1A82B6A700A5DAE0 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddReminderViewController.m; path = ../AddReminderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,15 +98,16 @@
 			children = (
 				EC4639AB1A801D3800A5DAE0 /* AppDelegate.h */,
 				EC4639AC1A801D3800A5DAE0 /* AppDelegate.m */,
-				EC4639AE1A801D3800A5DAE0 /* ViewController.h */,
-				EC4639AF1A801D3800A5DAE0 /* ViewController.m */,
-				EC4639CD1A801F4300A5DAE0 /* MapViewController.h */,
-				EC4639CE1A801F4300A5DAE0 /* MapViewController.m */,
 				EC4639D51A8038D700A5DAE0 /* Stack.h */,
 				EC4639D61A8038D700A5DAE0 /* Stack.m */,
 				EC4639D21A8037A900A5DAE0 /* Queue.h */,
 				EC4639D31A8037A900A5DAE0 /* Queue.m */,
+				EC4639CD1A801F4300A5DAE0 /* MapViewController.h */,
+				EC4639CE1A801F4300A5DAE0 /* MapViewController.m */,
+				EC4639DA1A82B6A700A5DAE0 /* AddReminderViewController.h */,
+				EC4639DB1A82B6A700A5DAE0 /* AddReminderViewController.m */,
 				EC4639B11A801D3800A5DAE0 /* Main.storyboard */,
+				EC4639D81A817DAC00A5DAE0 /* AustinJackson.png */,
 				EC4639B41A801D3800A5DAE0 /* Images.xcassets */,
 				EC4639B61A801D3800A5DAE0 /* LaunchScreen.xib */,
 				EC4639A71A801D3800A5DAE0 /* Supporting Files */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4639B31A801D3800A5DAE0 /* Main.storyboard in Resources */,
+				EC4639D91A817DAC00A5DAE0 /* AustinJackson.png in Resources */,
 				EC4639B81A801D3800A5DAE0 /* LaunchScreen.xib in Resources */,
 				EC4639B51A801D3800A5DAE0 /* Images.xcassets in Resources */,
 			);
@@ -243,9 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4639DC1A82B6A700A5DAE0 /* AddReminderViewController.m in Sources */,
 				EC4639D71A8038D700A5DAE0 /* Stack.m in Sources */,
 				EC4639D41A8037A900A5DAE0 /* Queue.m in Sources */,
-				EC4639B01A801D3800A5DAE0 /* ViewController.m in Sources */,
 				EC4639AD1A801D3800A5DAE0 /* AppDelegate.m in Sources */,
 				EC4639AA1A801D3800A5DAE0 /* main.m in Sources */,
 				EC4639CF1A801F4300A5DAE0 /* MapViewController.m in Sources */,
