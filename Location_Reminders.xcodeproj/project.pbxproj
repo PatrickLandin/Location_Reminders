@@ -19,6 +19,14 @@
 		EC4639D71A8038D700A5DAE0 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639D61A8038D700A5DAE0 /* Stack.m */; };
 		EC4639D91A817DAC00A5DAE0 /* AustinJackson.png in Resources */ = {isa = PBXBuildFile; fileRef = EC4639D81A817DAC00A5DAE0 /* AustinJackson.png */; };
 		EC4639DC1A82B6A700A5DAE0 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4639DB1A82B6A700A5DAE0 /* AddReminderViewController.m */; };
+		ECCA4D4B1A840A62001B4D5F /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA4D4A1A840A62001B4D5F /* InterfaceController.m */; };
+		ECCA4D4E1A840A62001B4D5F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA4D4D1A840A62001B4D5F /* NotificationController.m */; };
+		ECCA4D511A840A62001B4D5F /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA4D501A840A62001B4D5F /* GlanceController.m */; };
+		ECCA4D531A840A62001B4D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCA4D521A840A62001B4D5F /* Images.xcassets */; };
+		ECCA4D571A840A62001B4D5F /* Location_Reminders WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = ECCA4D561A840A62001B4D5F /* Location_Reminders WatchKit App.app */; };
+		ECCA4D5F1A840A62001B4D5F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCA4D5D1A840A62001B4D5F /* Interface.storyboard */; };
+		ECCA4D611A840A62001B4D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCA4D601A840A62001B4D5F /* Images.xcassets */; };
+		ECCA4D641A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ECCA4D441A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +37,35 @@
 			remoteGlobalIDString = EC4639A31A801D3800A5DAE0;
 			remoteInfo = Location_Reminders;
 		};
+		ECCA4D581A840A62001B4D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC46399C1A801D3800A5DAE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECCA4D551A840A62001B4D5F;
+			remoteInfo = "Location_Reminders WatchKit App";
+		};
+		ECCA4D621A840A62001B4D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC46399C1A801D3800A5DAE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECCA4D431A840A62001B4D5F;
+			remoteInfo = "Location_Reminders WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECCA4D6B1A840A62001B4D5F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ECCA4D641A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EC4639A41A801D3800A5DAE0 /* Location_Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Location_Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +89,22 @@
 		EC4639D81A817DAC00A5DAE0 /* AustinJackson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AustinJackson.png; sourceTree = "<group>"; };
 		EC4639DA1A82B6A700A5DAE0 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddReminderViewController.h; path = ../AddReminderViewController.h; sourceTree = "<group>"; };
 		EC4639DB1A82B6A700A5DAE0 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddReminderViewController.m; path = ../AddReminderViewController.m; sourceTree = "<group>"; };
+		ECCA4D441A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Location_Reminders WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCA4D471A840A62001B4D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECCA4D481A840A62001B4D5F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		ECCA4D491A840A62001B4D5F /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		ECCA4D4A1A840A62001B4D5F /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		ECCA4D4C1A840A62001B4D5F /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		ECCA4D4D1A840A62001B4D5F /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		ECCA4D4F1A840A62001B4D5F /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		ECCA4D501A840A62001B4D5F /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		ECCA4D521A840A62001B4D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ECCA4D561A840A62001B4D5F /* Location_Reminders WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Location_Reminders WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCA4D5C1A840A62001B4D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECCA4D5E1A840A62001B4D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		ECCA4D601A840A62001B4D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ECCA4D6E1A840D78001B4D5F /* ReminderRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderRowController.h; path = ../ReminderRowController.h; sourceTree = "<group>"; };
+		ECCA4D6F1A840D78001B4D5F /* ReminderRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderRowController.m; path = ../ReminderRowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +123,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECCA4D411A840A62001B4D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +139,8 @@
 				EC4639D01A80211E00A5DAE0 /* MapKit.framework */,
 				EC4639A61A801D3800A5DAE0 /* Location_Reminders */,
 				EC4639C01A801D3800A5DAE0 /* Location_RemindersTests */,
+				ECCA4D451A840A62001B4D5F /* Location_Reminders WatchKit Extension */,
+				ECCA4D5A1A840A62001B4D5F /* Location_Reminders WatchKit App */,
 				EC4639A51A801D3800A5DAE0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +150,8 @@
 			children = (
 				EC4639A41A801D3800A5DAE0 /* Location_Reminders.app */,
 				EC4639BD1A801D3800A5DAE0 /* Location_RemindersTests.xctest */,
+				ECCA4D441A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex */,
+				ECCA4D561A840A62001B4D5F /* Location_Reminders WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +204,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ECCA4D451A840A62001B4D5F /* Location_Reminders WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA4D491A840A62001B4D5F /* InterfaceController.h */,
+				ECCA4D4A1A840A62001B4D5F /* InterfaceController.m */,
+				ECCA4D4C1A840A62001B4D5F /* NotificationController.h */,
+				ECCA4D4D1A840A62001B4D5F /* NotificationController.m */,
+				ECCA4D6E1A840D78001B4D5F /* ReminderRowController.h */,
+				ECCA4D6F1A840D78001B4D5F /* ReminderRowController.m */,
+				ECCA4D4F1A840A62001B4D5F /* GlanceController.h */,
+				ECCA4D501A840A62001B4D5F /* GlanceController.m */,
+				ECCA4D521A840A62001B4D5F /* Images.xcassets */,
+				ECCA4D461A840A62001B4D5F /* Supporting Files */,
+			);
+			path = "Location_Reminders WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		ECCA4D461A840A62001B4D5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA4D471A840A62001B4D5F /* Info.plist */,
+				ECCA4D481A840A62001B4D5F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECCA4D5A1A840A62001B4D5F /* Location_Reminders WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA4D5D1A840A62001B4D5F /* Interface.storyboard */,
+				ECCA4D601A840A62001B4D5F /* Images.xcassets */,
+				ECCA4D5B1A840A62001B4D5F /* Supporting Files */,
+			);
+			path = "Location_Reminders WatchKit App";
+			sourceTree = "<group>";
+		};
+		ECCA4D5B1A840A62001B4D5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA4D5C1A840A62001B4D5F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,10 +258,12 @@
 				EC4639A01A801D3800A5DAE0 /* Sources */,
 				EC4639A11A801D3800A5DAE0 /* Frameworks */,
 				EC4639A21A801D3800A5DAE0 /* Resources */,
+				ECCA4D6B1A840A62001B4D5F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ECCA4D631A840A62001B4D5F /* PBXTargetDependency */,
 			);
 			name = Location_Reminders;
 			productName = Location_Reminders;
@@ -179,6 +288,39 @@
 			productReference = EC4639BD1A801D3800A5DAE0 /* Location_RemindersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ECCA4D431A840A62001B4D5F /* Location_Reminders WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECCA4D6A1A840A62001B4D5F /* Build configuration list for PBXNativeTarget "Location_Reminders WatchKit Extension" */;
+			buildPhases = (
+				ECCA4D401A840A62001B4D5F /* Sources */,
+				ECCA4D411A840A62001B4D5F /* Frameworks */,
+				ECCA4D421A840A62001B4D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECCA4D591A840A62001B4D5F /* PBXTargetDependency */,
+			);
+			name = "Location_Reminders WatchKit Extension";
+			productName = "Location_Reminders WatchKit Extension";
+			productReference = ECCA4D441A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		ECCA4D551A840A62001B4D5F /* Location_Reminders WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECCA4D691A840A62001B4D5F /* Build configuration list for PBXNativeTarget "Location_Reminders WatchKit App" */;
+			buildPhases = (
+				ECCA4D541A840A62001B4D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Location_Reminders WatchKit App";
+			productName = "Location_Reminders WatchKit App";
+			productReference = ECCA4D561A840A62001B4D5F /* Location_Reminders WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +342,12 @@
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = EC4639A31A801D3800A5DAE0;
 					};
+					ECCA4D431A840A62001B4D5F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					ECCA4D551A840A62001B4D5F = {
+						CreatedOnToolsVersion = 6.2;
+					};
 				};
 			};
 			buildConfigurationList = EC46399F1A801D3800A5DAE0 /* Build configuration list for PBXProject "Location_Reminders" */;
@@ -217,6 +365,8 @@
 			targets = (
 				EC4639A31A801D3800A5DAE0 /* Location_Reminders */,
 				EC4639BC1A801D3800A5DAE0 /* Location_RemindersTests */,
+				ECCA4D431A840A62001B4D5F /* Location_Reminders WatchKit Extension */,
+				ECCA4D551A840A62001B4D5F /* Location_Reminders WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +387,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCA4D421A840A62001B4D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCA4D531A840A62001B4D5F /* Images.xcassets in Resources */,
+				ECCA4D571A840A62001B4D5F /* Location_Reminders WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCA4D541A840A62001B4D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCA4D5F1A840A62001B4D5F /* Interface.storyboard in Resources */,
+				ECCA4D611A840A62001B4D5F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +432,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECCA4D401A840A62001B4D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCA4D4E1A840A62001B4D5F /* NotificationController.m in Sources */,
+				ECCA4D4B1A840A62001B4D5F /* InterfaceController.m in Sources */,
+				ECCA4D511A840A62001B4D5F /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -271,6 +449,16 @@
 			isa = PBXTargetDependency;
 			target = EC4639A31A801D3800A5DAE0 /* Location_Reminders */;
 			targetProxy = EC4639BE1A801D3800A5DAE0 /* PBXContainerItemProxy */;
+		};
+		ECCA4D591A840A62001B4D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECCA4D551A840A62001B4D5F /* Location_Reminders WatchKit App */;
+			targetProxy = ECCA4D581A840A62001B4D5F /* PBXContainerItemProxy */;
+		};
+		ECCA4D631A840A62001B4D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECCA4D431A840A62001B4D5F /* Location_Reminders WatchKit Extension */;
+			targetProxy = ECCA4D621A840A62001B4D5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -289,6 +477,14 @@
 				EC4639B71A801D3800A5DAE0 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		ECCA4D5D1A840A62001B4D5F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECCA4D5E1A840A62001B4D5F /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,6 +622,66 @@
 			};
 			name = Release;
 		};
+		ECCA4D651A840A62001B4D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Location_Reminders WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ECCA4D661A840A62001B4D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "Location_Reminders WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		ECCA4D671A840A62001B4D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Location_Reminders_WatchKit_Extension;
+				INFOPLIST_FILE = "Location_Reminders WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		ECCA4D681A840A62001B4D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = Location_Reminders_WatchKit_Extension;
+				INFOPLIST_FILE = "Location_Reminders WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,12 +701,30 @@
 				EC4639C91A801D3800A5DAE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC4639CA1A801D3800A5DAE0 /* Build configuration list for PBXNativeTarget "Location_RemindersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC4639CB1A801D3800A5DAE0 /* Debug */,
 				EC4639CC1A801D3800A5DAE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECCA4D691A840A62001B4D5F /* Build configuration list for PBXNativeTarget "Location_Reminders WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCA4D671A840A62001B4D5F /* Debug */,
+				ECCA4D681A840A62001B4D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECCA4D6A1A840A62001B4D5F /* Build configuration list for PBXNativeTarget "Location_Reminders WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCA4D651A840A62001B4D5F /* Debug */,
+				ECCA4D661A840A62001B4D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

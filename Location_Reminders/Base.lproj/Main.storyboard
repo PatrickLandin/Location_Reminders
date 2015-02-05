@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pI6-t1-RbY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pI6-t1-RbY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -97,13 +97,27 @@
                                     <action selector="addReminderPressed:" destination="Ufz-c9-ERc" eventType="touchUpInside" id="fCA-WX-5hu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frM-TN-sue">
+                                <rect key="frame" x="169" y="247" width="263" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="djZ-cp-toX"/>
+                                    <constraint firstAttribute="width" constant="263" id="jvp-VU-68g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.83493523849999995" green="0.88671875" blue="0.98591694080000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="yZr-Gt-WlB" firstAttribute="top" secondItem="frM-TN-sue" secondAttribute="bottom" constant="8" id="XOW-2Y-6WD"/>
                             <constraint firstAttribute="centerY" secondItem="yZr-Gt-WlB" secondAttribute="centerY" id="eEh-YK-QGl"/>
                             <constraint firstAttribute="centerX" secondItem="yZr-Gt-WlB" secondAttribute="centerX" id="ePi-IS-tLQ"/>
+                            <constraint firstAttribute="centerX" secondItem="frM-TN-sue" secondAttribute="centerX" id="lQz-nl-Tpf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newReminderText" destination="frM-TN-sue" id="pL7-sq-YaX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtY-YW-jWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
