@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "InterfaceController.h"
 
 @interface MapInterfaceController : WKInterfaceController
 

@@ -11,7 +11,6 @@
 @interface MapInterfaceController()
 
 @property (weak, nonatomic) IBOutlet WKInterfaceMap *map;
-@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
