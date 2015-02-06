@@ -20,30 +20,12 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
   
-  CLLocationManager *locationManager = [CLLocationManager new];
-  NSSet *regions = locationManager.monitoredRegions;
-  NSArray *regionsArray = regions.allObjects;
-  
-  NSInteger index = 0;
-//  
-//  for (MKCoordinate *region in regionsArray) {
-//    ReminderRowController *rowController = [self.map rowControllerAtIndex:index];
-//    [MapInterfaceController.map setText:region.identifier];
-//    index++;
-//  }
-//  
-//  MKCoordinateRegion region = MKCoordinateRegionMake(self.regions.center, MKCoordinateSpanMake(0.03, 0.03));
-//  [self.mapView setRegion:region];
-//  
+  self.currentRegion = context;
+  MKCoordinateRegion region = MKCoordinateRegionMake(self.currentRegion.center, MKCoordinateSpanMake(.015, .015));
+  [self.map setRegion:region];
 
-    // Configure interface objects here.
-}
-
-//-(NSArray *)contextsForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
-//  
-//  
-//  return 
-//}
+//     Configure interface objects here.
+  }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user

@@ -13,6 +13,7 @@
 
 @interface InterfaceController()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
+@property (strong, nonatomic) NSArray *regionsArray;
 
 @end
 
@@ -24,18 +25,22 @@
   
   CLLocationManager *locationManager = [CLLocationManager new];
   NSSet *regions = locationManager.monitoredRegions;
-  NSArray *regionsArray = regions.allObjects;
-  [self.table setNumberOfRows:regionsArray.count withRowType:@"ReminderRowController"];
+  self.regionsArray = regions.allObjects;
   
+  [self.table setNumberOfRows:regions.count withRowType:@"ReminderRowController"];
   NSInteger index = 0;
-  
-  for (CLCircularRegion *region in regionsArray) {
+  for (CLCircularRegion *region in self.regionsArray) {
     ReminderRowController *rowController = [self.table rowControllerAtIndex:index];
     [rowController.reminderLabel setText:region.identifier];
     index++;
   }
     // Configure interface objects here.
 }
+
+-(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex {
+  return self.regionsArray[rowIndex];
+}
+
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
