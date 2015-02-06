@@ -10,4 +10,6 @@
 
 @interface Stack : NSObject
 
+@property (strong,nonatomic) NSMutableArray *items;
+
 @end

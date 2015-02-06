@@ -10,47 +10,27 @@
 
 @implementation Stack
 
+-(instancetype)init {
+  self = [super init];
+  if (self) {
+    self.items = [[NSMutableArray alloc] init];
+  }
+  return self;
+}
+
+-(void) pushString:(NSString*) string {
+  [self.items addObject: string];
+}
+
+-(NSString *) popString {
+  NSString *lastItem = self.items.lastObject;
+  [self.items removeLastObject];
+  return lastItem;
+}
+
+-(NSString *) peekStack {
+  NSString *lastItem = self.items.lastObject;
+  return lastItem;
+}
+
 @end
-
-int items[] = {};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//class Stack {
-//  var items = [Int]()
-//  func push(item : Int) {
-//    self.items.append(item)
-//  }
-//  
-//  func pop() -> Int? {
-//    if !self.items.isEmpty{
-//      let item = self.items.last
-//      self.items.removeLast()
-//      return item!
-//    } else {
-//      return nil
-//    }
-//  }
-//  
-//  func peak() ->Int? {
-//    return self.items.last
-//  }
-//  }
