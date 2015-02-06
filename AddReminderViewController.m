@@ -9,7 +9,7 @@
 #import "AddReminderViewController.h"
 
 @interface AddReminderViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *newReminderText;
+@property (weak, nonatomic) IBOutlet UITextField *reminderText;
 
 @end
 
@@ -23,10 +23,11 @@
 
 - (IBAction)addReminderPressed:(id)sender {
   if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
-    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:1000 identifier:@"Reminder"];
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:self.annotation.coordinate radius:349 identifier:self.reminderText.text];
     [self.locationManager startMonitoringForRegion:region];
 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ReminderAdded" object:self userInfo:@{@"reminder" : region}];
+    
   }
 }
 

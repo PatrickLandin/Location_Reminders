@@ -27,6 +27,8 @@
 		ECCA4D5F1A840A62001B4D5F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCA4D5D1A840A62001B4D5F /* Interface.storyboard */; };
 		ECCA4D611A840A62001B4D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCA4D601A840A62001B4D5F /* Images.xcassets */; };
 		ECCA4D641A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ECCA4D441A840A62001B4D5F /* Location_Reminders WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ECCA4D701A84259A001B4D5F /* ReminderRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA4D6F1A840D78001B4D5F /* ReminderRowController.m */; };
+		ECCA4D791A84384F001B4D5F /* MapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA4D781A84384F001B4D5F /* MapInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		ECCA4D601A840A62001B4D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECCA4D6E1A840D78001B4D5F /* ReminderRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderRowController.h; path = ../ReminderRowController.h; sourceTree = "<group>"; };
 		ECCA4D6F1A840D78001B4D5F /* ReminderRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderRowController.m; path = ../ReminderRowController.m; sourceTree = "<group>"; };
+		ECCA4D771A84384F001B4D5F /* MapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapInterfaceController.h; path = ../MapInterfaceController.h; sourceTree = "<group>"; };
+		ECCA4D781A84384F001B4D5F /* MapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapInterfaceController.m; path = ../MapInterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,10 +213,12 @@
 			children = (
 				ECCA4D491A840A62001B4D5F /* InterfaceController.h */,
 				ECCA4D4A1A840A62001B4D5F /* InterfaceController.m */,
-				ECCA4D4C1A840A62001B4D5F /* NotificationController.h */,
-				ECCA4D4D1A840A62001B4D5F /* NotificationController.m */,
 				ECCA4D6E1A840D78001B4D5F /* ReminderRowController.h */,
 				ECCA4D6F1A840D78001B4D5F /* ReminderRowController.m */,
+				ECCA4D771A84384F001B4D5F /* MapInterfaceController.h */,
+				ECCA4D781A84384F001B4D5F /* MapInterfaceController.m */,
+				ECCA4D4C1A840A62001B4D5F /* NotificationController.h */,
+				ECCA4D4D1A840A62001B4D5F /* NotificationController.m */,
 				ECCA4D4F1A840A62001B4D5F /* GlanceController.h */,
 				ECCA4D501A840A62001B4D5F /* GlanceController.m */,
 				ECCA4D521A840A62001B4D5F /* Images.xcassets */,
@@ -436,6 +442,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCA4D791A84384F001B4D5F /* MapInterfaceController.m in Sources */,
+				ECCA4D701A84259A001B4D5F /* ReminderRowController.m in Sources */,
 				ECCA4D4E1A840A62001B4D5F /* NotificationController.m in Sources */,
 				ECCA4D4B1A840A62001B4D5F /* InterfaceController.m in Sources */,
 				ECCA4D511A840A62001B4D5F /* GlanceController.m in Sources */,

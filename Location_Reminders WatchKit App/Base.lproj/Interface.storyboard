@@ -35,13 +35,16 @@
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
-        <!--Interface Controller-->
+        <!--MAP_CONTROLLER-->
         <scene sceneID="NSm-RT-ACK">
             <objects>
-                <controller id="1kg-wK-ugD">
+                <controller identifier="MAP_CONTROLLER" id="1kg-wK-ugD" customClass="MapInterfaceController">
                     <items>
                         <map height="100" alignment="left" id="7YK-Hg-Sag"/>
                     </items>
+                    <connections>
+                        <outlet property="map" destination="7YK-Hg-Sag" id="bGe-uu-MYM"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="456" y="347"/>

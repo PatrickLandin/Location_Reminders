@@ -25,16 +25,15 @@
   CLLocationManager *locationManager = [CLLocationManager new];
   NSSet *regions = locationManager.monitoredRegions;
   NSArray *regionsArray = regions.allObjects;
+  [self.table setNumberOfRows:regionsArray.count withRowType:@"ReminderRowController"];
   
-  NSArray *names = @[@"Mill Creek", @"Poquerolles", @"Gambon"];
-  [self.table setNumberOfRows:names.count withRowType:@"ReminderRowController"];
   NSInteger index = 0;
-  for (NSString *name in names) {
+  
+  for (CLCircularRegion *region in regionsArray) {
     ReminderRowController *rowController = [self.table rowControllerAtIndex:index];
-    [rowController.reminderLabel setText:name];
+    [rowController.reminderLabel setText:region.identifier];
     index++;
   }
-
     // Configure interface objects here.
 }
 

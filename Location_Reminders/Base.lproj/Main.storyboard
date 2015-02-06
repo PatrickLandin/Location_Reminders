@@ -116,7 +116,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="newReminderText" destination="frM-TN-sue" id="pL7-sq-YaX"/>
+                        <outlet property="reminderText" destination="frM-TN-sue" id="B3u-8f-f2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtY-YW-jWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
